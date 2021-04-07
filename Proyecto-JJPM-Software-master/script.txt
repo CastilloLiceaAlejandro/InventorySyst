@@ -1,0 +1,58 @@
+CREATE DATABASE [PruebaCSharpSQL]
+USE [PruebaCSharpSQL]
+GO
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Sucursal](
+	[idSucursal] [int] Primary key,
+	[Fecha] [date] NOT NULL,
+	[Telefono] [varchar](20) NULL,
+	[Manager] [varchar](20) NULL,
+	[Correo] [Text] NULL,
+	[Direccion] [Text] NULL,
+)
+GO
+
+CREATE TABLE [dbo].[Usuario](
+	[idUsuario] [int] NOT NULL,
+	[idSucursal] [int] FOREIGN KEY REFERENCES [dbo].[Sucursal] (idSucursal),
+	[Nombre] [varchar](25) NULL,
+	[ApellidoP] [varchar](20) NULL,
+	[ApellidoM] [varchar](20) NULL,
+	[Puesto] [varchar](20) NULL,
+	[Pass] [varchar](20) NULL,
+	[Ingreso] [date] NULL,
+
+PRIMARY KEY CLUSTERED 
+(
+	[idUsuario] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[Material](
+	[idMaterial] [int] Primary key,
+	[Cantidad] [int] NOT NULL,
+	[Fecha_Ingreso] [date] NOT NULL,
+)
+GO
+
+CREATE TABLE [dbo].[Producto](
+	[idMaterial] [int] Primary key,
+	[Precio] [int] NOT NULL,
+	[Cantidad] [int] NOT NULL,
+)
+GO
+
+CREATE TABLE [dbo].[Venta](
+	[idVenta] [int] Primary key,
+	[Registros] [text] NOT NULL,
+	[Total] [int] NOT NULL,
+)
+GO
+
+/*INSERT [dbo].[Usuario] ([idUsuario], [Nombre], [ApellidoP], [ApellidoM], [Pass], [Ingreso]) VALUES (, , '', '', '', '', '', CURDATE())*/
