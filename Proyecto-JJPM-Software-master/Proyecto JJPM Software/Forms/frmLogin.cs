@@ -76,7 +76,7 @@ namespace Proyecto_JJPM_Software.Forms
             string[] TipUsuario=new string[2];
             string PassEncriptada = "";
             
-            //Encritamos la Contraseña
+            //Encriptamos la Contraseña
             PassEncriptada = Encrypt.GetSHA256(txtBoxPassword.Text.Trim());
 
             if (string.IsNullOrWhiteSpace(txtBoxUsername.Text)||string.IsNullOrWhiteSpace(txtBoxPassword.Text))
@@ -88,20 +88,27 @@ namespace Proyecto_JJPM_Software.Forms
                 try
                 {
                     TipUsuario = Log.Login(txtBoxUsername.Text, PassEncriptada);
-                    if (TipUsuario[0] == "Caller")
+                    if (TipUsuario[0] == "Gerente")
                     {
                         this.Hide();
                         var form1 = new frmPrincipal(TipUsuario);
                         form1.Closed += (s, args) => this.Close();
                         form1.Show();
                     }
-                    else if (TipUsuario[0] == "Leads")
+                    else if (TipUsuario[0] == "Vendedor")
                     {
                         this.Hide();
                         var form1 = new frmPrincipal(TipUsuario);
                         form1.Closed += (s, args) => this.Close();
                         form1.Show();
 
+                    }
+                    else if (TipUsuario[0] == "Panadero")
+                    {
+                        this.Hide();
+                        var form1 = new frmPrincipal(TipUsuario);
+                        form1.Closed += (s, args) => this.Close();
+                        form1.Show();
                     }
                     else if (TipUsuario[0] == "Admin")
                     {
@@ -125,18 +132,6 @@ namespace Proyecto_JJPM_Software.Forms
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            txtBoxPassword.Text = "jjpass%2020";
-            txtBoxUsername.Text = "Admin";
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            //Shhhh 
-            DialogResult dr = MessageBox.Show("¡Ten un buen dia =D!","Mensaje Secreto",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-        }
-
         private void pboxPassVisual_Click(object sender, EventArgs e)
         {
             //Esto hara que se pueda ver o no, la contraseña.
@@ -150,18 +145,20 @@ namespace Proyecto_JJPM_Software.Forms
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        
+        /*
+        private void button2_Click(object sender, EventArgs e) //AutocompletarGerente
         {
             txtBoxPassword.Text = "123";
-            txtBoxUsername.Text = "RodriguezJE30";
+            txtBoxUsername.Text = "Gerente1";
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)  //Autocmpletar Vendedor
         {
-            txtBoxPassword.Text = "12345";
-            txtBoxUsername.Text = "RamirezJ87";
+            txtBoxPassword.Text = "123";
+            txtBoxUsername.Text = "Vendedor1";
         }
-
+        */
 
         private void frmLogin_Shown(object sender, EventArgs e)
         {

@@ -11,10 +11,14 @@ namespace Proyecto_JJPM_Software.Clases
 {
     class ConexionBD
     {
-        string Cadena = "Data Source=DESKTOP-PRRK88P;Initial Catalog=PruebaCSharpSQL;Integrated Security= True";
-		//string Cadena = "Data Source=ASUS-A\\ADMINISTRACIONBD;Initial Catalog=PruebaCSharpSQL;Integrated Security=True";
+        string Cadena = "Data Source=LAPTOP-A1PRB8G8;Initial Catalog=PruebaCSharpSQL;Integrated Security= True";//Alejandro
+        //string Cadena = "Data Source=;Initial Catalog=PruebaCSharpSQL;Integrated Security= True";
+        //string Cadena = "Data Source=;Initial Catalog=PruebaCSharpSQL;Integrated Security= True";
+        //string Cadena = "Data Source=;Initial Catalog=PruebaCSharpSQL;Integrated Security= True";
+        //string Cadena = "Data Source=;Initial Catalog=PruebaCSharpSQL;Integrated Security= True";
+        //string Cadena = "Data Source=;Initial Catalog=PruebaCSharpSQL;Integrated Security= True";
 
-		public SqlConnection ConectarBD = new SqlConnection();
+        public SqlConnection ConectarBD = new SqlConnection();
 
         public ConexionBD()
         {
@@ -30,7 +34,6 @@ namespace Proyecto_JJPM_Software.Clases
             catch (Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show("Error: "+ ex);
-                
             }
         }
 
@@ -46,7 +49,7 @@ namespace Proyecto_JJPM_Software.Clases
             {
                 //Toma los valores de Usuario y Pass.
                 //Evitando SQL Injection
-                SqlCommand cmd = new SqlCommand("Select Usuario,Pass,Tipo,Nombre from Usuario where Usuario=@Usuario and Pass=@Pass", ConectarBD);
+                SqlCommand cmd = new SqlCommand("Select * from Usuario where Usuario=@Usuario and Pass=@Pass", ConectarBD);
                 cmd.Parameters.Add(new SqlParameter("@Usuario", Usuario));
                 cmd.Parameters.Add(new SqlParameter("@Pass", Contra));
                 SqlDataAdapter dr = new SqlDataAdapter(cmd);
@@ -55,15 +58,21 @@ namespace Proyecto_JJPM_Software.Clases
 
                 if (dt.Rows.Count == 1)
                 {
-                    if (dt.Rows[0][2].ToString() == "Caller")
+                    if (dt.Rows[0][2].ToString() == "Gerente")
                     {
-                        TipoUsuario[0] = "Caller";
+                        TipoUsuario[0] = "Gerente";
                         TipoUsuario[1] = dt.Rows[0][3].ToString();
                         return TipoUsuario;
                     }
-                    else if (dt.Rows[0][2].ToString() == "Leads")
+                    else if (dt.Rows[0][2].ToString() == "Vendedor")
                     {
-                        TipoUsuario[0] = "Leads";
+                        TipoUsuario[0] = "Vendedor";
+                        TipoUsuario[1] = dt.Rows[0][3].ToString();
+                        return TipoUsuario;
+                    }
+                    else if (dt.Rows[0][2].ToString() == "Panadero")
+                    {
+                        TipoUsuario[0] = "Panadero";
                         TipoUsuario[1] = dt.Rows[0][3].ToString();
                         return TipoUsuario;
                     }

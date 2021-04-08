@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2041
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto JJPM Software", "Proyecto JJPM Software\Proyecto JJPM Software.csproj", "{7D3130A5-4E07-4856-844C-6FE59F2F2832}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorySyst", "Proyecto JJPM Software\InventorySyst.csproj", "{7D3130A5-4E07-4856-844C-6FE59F2F2832}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

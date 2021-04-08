@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.panelTop = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.lblTituloCentral = new System.Windows.Forms.Label();
             this.pboxMin = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.pboxMax = new System.Windows.Forms.PictureBox();
             this.pboxRestore = new System.Windows.Forms.PictureBox();
             this.pboxClose = new System.Windows.Forms.PictureBox();
@@ -42,26 +40,20 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtBoxPassword = new System.Windows.Forms.TextBox();
             this.txtBoxUsername = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pboxPassVisual = new System.Windows.Forms.PictureBox();
-            this.pboxLogo = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxRestore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxPassVisual)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.panelTop.Controls.Add(this.button3);
-            this.panelTop.Controls.Add(this.button2);
             this.panelTop.Controls.Add(this.lblTituloCentral);
             this.panelTop.Controls.Add(this.pboxMin);
-            this.panelTop.Controls.Add(this.button1);
             this.panelTop.Controls.Add(this.pboxMax);
             this.panelTop.Controls.Add(this.pboxRestore);
             this.panelTop.Controls.Add(this.pboxClose);
@@ -73,45 +65,24 @@
             this.panelTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseDown);
             this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseMove);
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(349, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(153, 31);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Boton del Caller";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(190, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(153, 31);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Boton del Leads";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // lblTituloCentral
             // 
             this.lblTituloCentral.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTituloCentral.AutoSize = true;
-            this.lblTituloCentral.Font = new System.Drawing.Font("Lucida Calligraphy", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloCentral.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloCentral.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblTituloCentral.Location = new System.Drawing.Point(525, 9);
             this.lblTituloCentral.Name = "lblTituloCentral";
-            this.lblTituloCentral.Size = new System.Drawing.Size(272, 37);
+            this.lblTituloCentral.Size = new System.Drawing.Size(308, 44);
             this.lblTituloCentral.TabIndex = 8;
             this.lblTituloCentral.Text = "Inicio de Sesion";
             // 
             // pboxMin
             // 
             this.pboxMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pboxMin.Image = global::Proyecto_JJPM_Software.Properties.Resources.Minimize_Window_2_48px;
+            this.pboxMin.ErrorImage = null;
+            this.pboxMin.InitialImage = ((System.Drawing.Image)(resources.GetObject("pboxMin.InitialImage")));
             this.pboxMin.Location = new System.Drawing.Point(1091, 5);
             this.pboxMin.Name = "pboxMin";
             this.pboxMin.Size = new System.Drawing.Size(48, 48);
@@ -120,21 +91,11 @@
             this.pboxMin.TabStop = false;
             this.pboxMin.Click += new System.EventHandler(this.pboxMin_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(31, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 31);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Boton del Admin";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // pboxMax
             // 
             this.pboxMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pboxMax.Image = global::Proyecto_JJPM_Software.Properties.Resources.Maximize_Window_2_48px;
+            this.pboxMax.ErrorImage = null;
+            this.pboxMax.InitialImage = ((System.Drawing.Image)(resources.GetObject("pboxMax.InitialImage")));
             this.pboxMax.Location = new System.Drawing.Point(1152, 5);
             this.pboxMax.Name = "pboxMax";
             this.pboxMax.Size = new System.Drawing.Size(48, 48);
@@ -146,7 +107,6 @@
             // pboxRestore
             // 
             this.pboxRestore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pboxRestore.Image = global::Proyecto_JJPM_Software.Properties.Resources.Restore_Window_2_48px;
             this.pboxRestore.Location = new System.Drawing.Point(1152, 7);
             this.pboxRestore.Name = "pboxRestore";
             this.pboxRestore.Size = new System.Drawing.Size(48, 48);
@@ -158,8 +118,9 @@
             // pboxClose
             // 
             this.pboxClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pboxClose.Image = global::Proyecto_JJPM_Software.Properties.Resources.Close_Window__2_48px;
-            this.pboxClose.Location = new System.Drawing.Point(1212, 6);
+            this.pboxClose.ErrorImage = null;
+            this.pboxClose.InitialImage = ((System.Drawing.Image)(resources.GetObject("pboxClose.InitialImage")));
+            this.pboxClose.Location = new System.Drawing.Point(1220, 7);
             this.pboxClose.Name = "pboxClose";
             this.pboxClose.Size = new System.Drawing.Size(48, 48);
             this.pboxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -174,7 +135,7 @@
             this.lblUser.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.Location = new System.Drawing.Point(582, 201);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(159, 36);
+            this.lblUser.Size = new System.Drawing.Size(199, 44);
             this.lblUser.TabIndex = 4;
             this.lblUser.Text = "Username";
             // 
@@ -185,7 +146,7 @@
             this.lblPass.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPass.Location = new System.Drawing.Point(584, 373);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(146, 36);
+            this.lblPass.Size = new System.Drawing.Size(187, 44);
             this.lblPass.TabIndex = 6;
             this.lblPass.Text = "Password";
             // 
@@ -204,64 +165,39 @@
             // txtBoxPassword
             // 
             this.txtBoxPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxPassword.Location = new System.Drawing.Point(546, 419);
+            this.txtBoxPassword.Location = new System.Drawing.Point(562, 420);
             this.txtBoxPassword.MaxLength = 20;
             this.txtBoxPassword.Name = "txtBoxPassword";
             this.txtBoxPassword.PasswordChar = '·';
-            this.txtBoxPassword.Size = new System.Drawing.Size(228, 26);
+            this.txtBoxPassword.Size = new System.Drawing.Size(228, 31);
             this.txtBoxPassword.TabIndex = 10;
             // 
             // txtBoxUsername
             // 
             this.txtBoxUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBoxUsername.Location = new System.Drawing.Point(546, 253);
+            this.txtBoxUsername.Location = new System.Drawing.Point(562, 248);
             this.txtBoxUsername.MaxLength = 20;
             this.txtBoxUsername.Name = "txtBoxUsername";
-            this.txtBoxUsername.Size = new System.Drawing.Size(228, 26);
+            this.txtBoxUsername.Size = new System.Drawing.Size(228, 31);
             this.txtBoxUsername.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(81, 505);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 37);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "JJP    Software";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pboxPassVisual
             // 
             this.pboxPassVisual.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pboxPassVisual.Image = global::Proyecto_JJPM_Software.Properties.Resources.Ojito;
-            this.pboxPassVisual.Location = new System.Drawing.Point(781, 419);
+            this.pboxPassVisual.Location = new System.Drawing.Point(797, 420);
             this.pboxPassVisual.Name = "pboxPassVisual";
-            this.pboxPassVisual.Size = new System.Drawing.Size(28, 26);
+            this.pboxPassVisual.Size = new System.Drawing.Size(36, 31);
             this.pboxPassVisual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxPassVisual.TabIndex = 14;
             this.pboxPassVisual.TabStop = false;
             this.pboxPassVisual.Click += new System.EventHandler(this.pboxPassVisual_Click);
             // 
-            // pboxLogo
-            // 
-            this.pboxLogo.Image = global::Proyecto_JJPM_Software.Properties.Resources.JJP1;
-            this.pboxLogo.Location = new System.Drawing.Point(-17, 129);
-            this.pboxLogo.Name = "pboxLogo";
-            this.pboxLogo.Size = new System.Drawing.Size(466, 389);
-            this.pboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxLogo.TabIndex = 12;
-            this.pboxLogo.TabStop = false;
-            // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.pboxPassVisual);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pboxLogo);
             this.Controls.Add(this.txtBoxPassword);
             this.Controls.Add(this.txtBoxUsername);
             this.Controls.Add(this.btnLogin);
@@ -282,7 +218,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pboxRestore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxPassVisual)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,11 +236,6 @@
         private System.Windows.Forms.TextBox txtBoxPassword;
         private System.Windows.Forms.TextBox txtBoxUsername;
         private System.Windows.Forms.Label lblTituloCentral;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pboxLogo;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pboxPassVisual;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
     }
 }

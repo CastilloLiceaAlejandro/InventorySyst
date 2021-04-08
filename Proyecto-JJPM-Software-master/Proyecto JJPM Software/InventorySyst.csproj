@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7D3130A5-4E07-4856-844C-6FE59F2F2832}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Proyecto_JJPM_Software</RootNamespace>
-    <AssemblyName>Proyecto JJPM Software</AssemblyName>
+    <RootNamespace>Inventory_Syst</RootNamespace>
+    <AssemblyName>InventorySyst</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -147,16 +147,19 @@
     <None Include="Resources\Caps_LockOn 48px 2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\JJP.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\JJP1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Ojito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseIcon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Producto_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RhaegarlogoBR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ventas_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
